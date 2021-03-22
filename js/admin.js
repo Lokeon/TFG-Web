@@ -6,15 +6,16 @@ function login() {
     crossDomain: true,
     url: myUrl,
     data: JSON.stringify({
-        username: $("#forUsername").val(),
-        password: $("#forPassword").val(),
+      username: $("#Username").val(),
+      password: $("#Password").val(),
     }),
     success: function () {
       Swal.fire({
         icon: "success",
-        text: "Insertado con éxito!",
+        text: "Logged in!",
+        timer: 2000,
       }).then(function () {
-        location.href = "./aa.html";
+        location.href = "./users/user.html";
       });
     },
     error: function (xhr, status, error) {

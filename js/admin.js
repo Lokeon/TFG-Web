@@ -9,7 +9,7 @@ function login() {
       username: $("#Username").val(),
       password: $("#Password").val(),
     }),
-    success: function () {
+    success: function (data) {
       Swal.fire({
         icon: "success",
         text: "Logged in!",

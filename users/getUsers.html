@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/users.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
-  </head>
+    <link rel="stylesheet" href="https:////cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css"></link>
+</head>
   <body>
     <header>
         <div class="wrapper">
@@ -20,13 +21,16 @@
                         <a href="#gameSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Games</a>
                         <ul class="collapse list-unstyled" id="gameSubmenu">
                             <li>
-                                <a href="#">Home 1</a>
+                                <a href="#">Insert Game</a>
                             </li>
                             <li>
-                                <a href="#">Home 2</a>
+                                <a href="#">Get Games</a>
                             </li>
                             <li>
-                                <a href="#">Home 3</a>
+                                <a href="#">Update Games</a>
+                            </li>
+                            <li>
+                                <a href="#">Delete Games</a>
                             </li>
                         </ul>
                     </li>
@@ -34,13 +38,13 @@
                         <a href="#userSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Users</a>
                         <ul class="collapse list-unstyled" id="userSubmenu">
                             <li>
-                                <a href="#">Page 1</a>
+                                <a href="./getUsers.html">Get Users</a>
                             </li>
                             <li>
-                                <a href="#">Page 2</a>
+                                <a href="#">Delete Users</a>
                             </li>
                             <li>
-                                <a href="#">Page 3</a>
+                                <a href="#">Update Users</a>
                             </li>
                         </ul>
                     </li>
@@ -60,11 +64,21 @@
     
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="nav navbar-nav mx-auto">
-                                <p>GET USERS</p>
+                                <p>Insert Game</p>
                             </ul>
                         </div>
                     </div>
                 </nav>
+                <table id="userTable" class="display">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Created at</th>
+                        </tr>
+                    </thead>
+                </table>
         </div>
     </main>
     <footer>
@@ -78,8 +92,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.min.css"></script>
-    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://kit.fontawesome.com/c663126675.js" crossorigin="anonymous"></script>
+    <script src="https:////cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
     <script src ="../js/components.js"> </script>
+    <script src="../js/users.js"></script>
 </body>
 </html>

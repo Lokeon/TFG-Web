@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/users.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
-  </head>
+</head>
   <body>
     <header>
         <div class="wrapper">
@@ -16,11 +16,11 @@
                     <h3>Administration</h3>
                 </div>
                 <ul class="list-unstyled components">
-                    <li class="active">
+                    <li class="notActive">
                         <a href="#gameSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Games</a>
                         <ul class="collapse list-unstyled" id="gameSubmenu">
                             <li>
-                                <a href="#">Insert Game</a>
+                                <a href="./insertGame.html">Insert Game</a>
                             </li>
                             <li>
                                 <a href="#">Get Games</a>
@@ -34,12 +34,14 @@
                         </ul>
                     </li>
                     <li>
+                        <li class="active">
                         <a href="#userSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Users</a>
                         <ul class="collapse list-unstyled" id="userSubmenu">
                             <li>
                                 <a href="../users/infoUser.html">Info Users</a>
                             </li>
                         </ul>
+                    </li>
                     </li>
                 </ul>
     </header>
@@ -62,6 +64,27 @@
                         </div>
                     </div>
                 </nav>
+                <form action="#">
+                    <div class="field">
+                        <input id="Name" type="text" required />
+                        <label>Name</label>
+                      </div>
+                      <div class="field">
+                        <input id="Genres" type="text" required />
+                        <label>Genres</label>
+                      </div>
+                      <div class="field">
+                          <input id="Description" type="text" required />
+                          <label>Description</label>
+                        </div>
+                        <div class="field">
+                          <input id="Image" type="file"  accept="image/*" required />
+                          <label>Game Image</label>
+                        </div>
+                      <div class="field">
+                        <input type="button" value="Save" onclick="postGame()" />
+                      </div>
+                </form>
         </div>
     </main>
     <footer>
@@ -76,7 +99,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="https://kit.fontawesome.com/c663126675.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src ="../js/components.js"> </script>
-    <script src ="../js/users.js"></script>
+    <script src="../js/games.js"></script>
 </body>
 </html>

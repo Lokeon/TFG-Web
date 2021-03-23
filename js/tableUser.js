@@ -47,7 +47,7 @@ $("#userTable tbody").on("click", ".delete", function () {
           Swal.fire("Poof! User has been deleted!", {
             icon: "success",
           }).then(function () {
-            location.href = "./getUsers.html";
+            location.href = "./infoUser.html";
           });
         },
         error: function (response) {

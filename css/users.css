@@ -144,3 +144,14 @@ a.article:hover {
     display: none;
   }
 }
+
+.delete {
+  background-color: rgb(44, 47, 51);
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  cursor: pointer;
+}
+.delete:hover {
+  background-color: red
+}

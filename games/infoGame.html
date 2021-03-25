@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Users</title>
+    <title>Games</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/users.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
@@ -20,26 +20,26 @@
                     <h3>Administration</h3>
                 </div>
                 <ul class="list-unstyled components">
-                    <li class="notActive">
+                    <li class="active">
                         <a href="#gameSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Games</a>
                         <ul class="collapse list-unstyled" id="gameSubmenu">
                             <li>
-                                <a href="../games/addGame.html">Add Game</a>
+                                <a href="./addGame.html">Add Game</a>
                             </li>
                             <li>
-                                <a href="../games/infoGame.html">Info Games</a>
+                                <a href="./infoGame.html">Info Games</a>
                             </li>
                             <li>
-                                <a href="../games/changeImageGame.html">Change Image Games</a>
+                                <a href="./changeImageGame.html">Change Image Games</a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <li class="active">
+                        <li class="notActive">
                         <a href="#userSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Users</a>
                         <ul class="collapse list-unstyled" id="userSubmenu">
                             <li>
-                                <a href="./infoUser.html">Info Users</a>
+                                <a href="../users/infoUser.html">Info Users</a>
                             </li>
                         </ul>
                     </li>
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                 </nav>
-                <table id="userTable" class="display">
+                <table id="gameTable" class="display">
                 </table>
         </div>
     </main>
@@ -87,6 +87,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="../js/dataTables.altEditor.free.js"></script>
     <script src ="../js/components.js"> </script>
-    <script src="../js/tableUser.js"></script>
+    <script src="../js/tableInfoGame.js"></script>
 </body>
 </html>

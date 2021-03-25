@@ -1,10 +1,9 @@
 function login() {
-  var myUrl = "http://localhost:3000/api/auth/login/admins";
   $.ajax({
     type: "POST",
     contentType: "application/json",
     crossDomain: true,
-    url: myUrl,
+    url: "http://localhost:3000/api/auth/login/admins",
     data: JSON.stringify({
       username: $("#Username").val(),
       password: $("#Password").val(),

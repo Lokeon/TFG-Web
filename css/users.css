@@ -153,5 +153,46 @@ a.article:hover {
   cursor: pointer;
 }
 .delete:hover {
-  background-color: red
+  background-color: red;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-bottom: 1%;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="file"] {
+  padding: 5px;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+.buttons {
+  background-color: rgb(35, 39, 42);
+  width: 20%;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  align-self: center;
+  padding: 5px;
+  color: white;
+  border: rgb(35, 39, 42);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttons:disabled {
+  background-color: grey;
+  color: darkgray;
+}
+
+label {
+  font-weight: "bold";
+  font-size: 1.2em;
 }

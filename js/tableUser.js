@@ -1,47 +1,33 @@
-$("#userTable").DataTable({
-  ajax: {
-    url: "http://localhost:3000/api/admins/users",
-    type: "GET",
-    dataSrc: "",
-    dataType: "json",
-  },
-  columns: [
-    { data: "_id" },
-    { data: "username" },
-    { data: "email" },
-    { data: "date" },
-  ],
-  columnDefs: [
-    {
-      targets: 4,
-      render: function (data, type, row, meta) {
-        return (
-          '<button class="delete" id=n-"' +
-          meta.row +
-          '"><i class="fa fa-trash"></i></button>'
-        );
-      },
+$(document).ready(function () {
+  $("#userTable").DataTable({
+    ajax: {
+      url: "http://localhost:3000/api/admins/users",
+      type: "GET",
+      dataSrc: "",
+      dataType: "json",
     },
-  ],
-});
-
-$("#userTable tbody").on("click", ".delete", function () {
-  var id = $(this).attr("id").match(/\d+/)[0];
-  var data = $("#userTable").DataTable().row(id).data();
-
-  Swal.fire({
-    title: "Are you sure you want delete this user?",
-    icon: "warning",
-    showCancelButton: true,
-    confirmButtonColor: "#3085d6",
-    cancelButtonColor: "#d33",
-    cancelButtonText: "Cancel",
-    confirmButtonText: "Yes, erase!",
-  }).then((deleted) => {
-    if (deleted.value) {
+    columns: [
+      { data: "_id", title: "Id", type: "readonly" },
+      { data: "username", title: "Username", type: "text" },
+      { data: "email", title: "Email", type: "text" },
+      { data: "date", title: "Created at", type: "date", type: "readonly" },
+    ],
+    dom: "Bfrtip",
+    select: "single",
+    responsive: true,
+    altEditor: true,
+    closeModalOnSuccess: true,
+    buttons: [
+      {
+        extend: "selected",
+        text: "Delete",
+        name: "delete",
+      }
+    ],
+    onDeleteRow: function (datatable, rowdata, success, error) {
       $.ajax({
         type: "DELETE",
-        url: "http://localhost:3000/api/admins/users/delete/" + data["_id"],
+        url: "http://localhost:3000/api/admins/users/delete/" + rowdata["_id"],
         dataType: "text",
         success: function (response) {
           Swal.fire("Poof! User has been deleted!", {
@@ -54,7 +40,6 @@ $("#userTable tbody").on("click", ".delete", function () {
           alert(response.responseText);
         },
       });
-    } else {
-    }
+    },
   });
 });

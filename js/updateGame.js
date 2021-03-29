@@ -6,11 +6,10 @@ function getGameId() {
     success: function (data) {
       $("#Name").val(JSON.stringify(data["name"]).replace(/"/g, ""));
     },
-    error: function () {
+    error: function (request, status, error) {
       Swal.fire({
         icon: "error",
-        text:
-          "ERROR: No se ha podido extraer la información. Puede que la actividad que esté intentando consultar no exista o que no se esté comunicando con el servidor.",
+        text: request.responseText,
       });
     },
   });
@@ -30,16 +29,15 @@ function patchGame() {
     success: function () {
       Swal.fire({
         icon: "success",
-        text: "Game succesfully inserted!",
+        text: "Image game succesfully changed!",
       }).then(function () {
         location.href = "./changeImageGame.html";
       });
     },
-    error: function () {
+    error: function (request, status, error) {
       Swal.fire({
         icon: "error",
-        text:
-          "ERROR: No ha podido insertarse. Compruebe su conexión con el servidor.",
+        text: request.responseText,
       });
     },
   });

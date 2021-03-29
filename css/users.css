@@ -196,3 +196,12 @@ label {
   font-weight: "bold";
   font-size: 1.2em;
 }
+
+.title {
+  font-size: 1.8em;
+}
+
+#sidIcon {
+  font-size: 1.3em;
+  margin-right: 4.5%;
+}

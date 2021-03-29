@@ -20,11 +20,10 @@ function postGame() {
         location.href = "./addGame.html";
       });
     },
-    error: function () {
+    error: function (request, status, error) {
       Swal.fire({
         icon: "error",
-        text:
-          "ERROR: No ha podido insertarse. Compruebe su conexión con el servidor.",
+        text: request.responseText,
       });
     },
   });

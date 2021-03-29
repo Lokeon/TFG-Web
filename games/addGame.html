@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Games</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <title>Add Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/users.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 </head>
-  <body>
+
+<body>
     <header>
         <div class="wrapper">
             <nav id="sidebar">
@@ -17,7 +21,8 @@
                 </div>
                 <ul class="list-unstyled components">
                     <li class="active">
-                        <a href="#gameSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Games</a>
+                        <a href="#gameSubmenu" data-toggle="collapse" aria-expanded="false"
+                            class="dropdown-toggle"><i id="sidIcon" class="fas fa-gamepad"></i>Games</a>
                         <ul class="collapse list-unstyled" id="gameSubmenu">
                             <li>
                                 <a href="./addGame.html">Add Game</a>
@@ -31,8 +36,9 @@
                         </ul>
                     </li>
                     <li>
-                        <li class="notActive">
-                        <a href="#userSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Users</a>
+                    <li class="notActive">
+                        <a href="#userSubmenu" data-toggle="collapse" aria-expanded="false"
+                            class="dropdown-toggle"><i id="sidIcon" class="fas fa-user"></i> Users</a>
                         <ul class="collapse list-unstyled" id="userSubmenu">
                             <li>
                                 <a href="../users/infoUser.html">Info Users</a>
@@ -41,69 +47,71 @@
                     </li>
                     </li>
                 </ul>
+            </nav>
+        </div>
     </header>
     <main>
-            <div id="content">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="container-fluid">
-    
-                        <button type="button" id="sidebarCollapse" class="btn btn-info">
-                            <i class="fas fa-align-left"></i>
-                        </button>
-                        <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <i class="fas fa-align-justify"></i>
-                        </button>
-    
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="nav navbar-nav mx-auto">
-                                <p>Insert Game</p>
-                            </ul>
-                        </div>
+        <div id="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav mx-auto">
+                            <p class="title">Add Game</p>
+                        </ul>
                     </div>
-                </nav>
-                <form action="#">
-                    <div class="input">
-                        <label>Name</label>
-                        <input id="Name" type="text" placeholder="Game name" required />
-                      </div>
-                      <div class="input">
-                          <label>Genres</label>
-                        <input id="Genres" type="text" placeholder="Game genres separated with commas" required />
-                      </div>
-                      <div class="input">
-                          <label>Description</label>
-                          <input id="Description" type="text" placeholder="Game Description" required />
-                        </div>
-                        <div class="input">
-                            <label>Game Image</label>
-                          <input id="Image" type="file"  accept="image/*" required />
-                        </div>
-                        <input
-                            type="button"
-                            id="btnSave"
-                            class="buttons"
-                            value="Save"
-                            disabled="disabled"
-                            onclick="postGame()"/>
-                </form>
-            </div>
+                </div>
+            </nav>
+            <form action="#">
+                <div class="input">
+                    <label>Name</label>
+                    <input id="Name" type="text" placeholder="Game name" required />
+                </div>
+                <div class="input">
+                    <label>Genres</label>
+                    <input id="Genres" type="text" placeholder="Game genres separated with commas" required />
+                </div>
+                <div class="input">
+                    <label>Description</label>
+                    <input id="Description" type="text" placeholder="Game Description" required />
+                </div>
+                <div class="input">
+                    <label>Game Image</label>
+                    <input id="Image" type="file" accept="image/*" required />
+                </div>
+                <input type="button" id="btnSave" class="buttons" value="Save" disabled="disabled"
+                    onclick="postGame()" />
+            </form>
+        </div>
 
     </main>
     <footer>
-      <div class="footer"></div>
+        <div class="footer"></div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
     <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="https://kit.fontawesome.com/c663126675.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="../js/btnSave.js"></script>
-    <script src ="../js/components.js"> </script>
+    <script src="../js/components.js"> </script>
     <script src="../js/addGame.js"></script>
 </body>
+
 </html>

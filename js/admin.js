@@ -2,7 +2,6 @@ function login() {
   $.ajax({
     type: "POST",
     contentType: "application/json",
-    crossDomain: true,
     url: "http://localhost:3000/api/auth/login/admins",
     data: JSON.stringify({
       username: $("#Username").val(),
@@ -14,13 +13,13 @@ function login() {
         text: "Logged in!",
         timer: 2000,
       }).then(function () {
-        location.href = "./users/user.html";
+        location.href = "./users/infoUser.html";
       });
     },
-    error: function (xhr, status, error) {
+    error: function (request, status, error) {
       Swal.fire({
         icon: "error",
-        text: xhr.text,
+        text: request.responseText,
       });
     },
   });

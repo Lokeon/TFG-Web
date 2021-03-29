@@ -36,8 +36,11 @@ $(document).ready(function () {
             location.href = "./infoUser.html";
           });
         },
-        error: function (response) {
-          alert(response.responseText);
+        error: function (request, status, error) {
+          Swal.fire({
+            icon: "error",
+            text: request.responseText,
+          });
         },
       });
     },

@@ -27,46 +27,13 @@ $(document).ready(function () {
     select: "single",
     responsive: true,
     altEditor: true,
-    encodeFiles: false,
     buttons: [
-      {
-        extend: "selected",
-        text: "Edit",
-        name: "edit",
-      },
       {
         extend: "selected",
         text: "Delete",
         name: "delete",
       },
     ],
-    onEditRow: function (datatable, rowdata, success, error) {
-      $.ajax({
-        type: "PUT",
-        url: "http://localhost:3000/api/admins/games/update/" + rowdata["_id"],
-        data: JSON.stringify({
-          name: rowdata["name"],
-          genre: rowdata["genre"],
-          description: rowdata["description"],
-        }),
-        contentType: "application/json",
-        success: function () {
-          Swal.fire({
-            icon: "success",
-            text: "Game successfully updated!",
-          }).then(function () {
-            location.href = "./infoGame.html";
-          });
-        },
-        error: function () {
-          Swal.fire({
-            icon: "error",
-            text:
-              "ERROR: No ha podido insertarse. Compruebe su conexión con el servidor.",
-          });
-        },
-      });
-    },
     onDeleteRow: function (datatable, rowdata, success, error) {
       $.ajax({
         type: "DELETE",
@@ -79,8 +46,11 @@ $(document).ready(function () {
             location.href = "./infoGame.html";
           });
         },
-        error: function (response) {
-          alert(response.responseText);
+        error: function (request, status, error) {
+          Swal.fire({
+            icon: "error",
+            text: request.responseText,
+          });
         },
       });
     },

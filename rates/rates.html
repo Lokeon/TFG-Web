@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Games</title>
+    <title>Rates</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
         integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/users.css" />
@@ -24,36 +24,36 @@
                     <h3>Administration</h3>
                 </div>
                 <ul class="list-unstyled components">
-                    <li class="active">
-                        <li>
-                            <li class="notActive">
-                                <a href="#statsSubmenu" data-toggle="collapse" aria-expanded="false"
-                                    class="dropdown-toggle"><i id="sidIcon" class="far fa-chart-bar"></i>Stats</a>
-                                <ul class="collapse list-unstyled" id="statsSubmenu">
-                                    <li>
-                                        <a href="../stats/stats.html">Stats</a>
-                                    </li>
-                                </ul>
-                            </li>
+                    <li>
+                        <li class="notActive">
+                            <a href="#statsSubmenu" data-toggle="collapse" aria-expanded="false"
+                                class="dropdown-toggle"><i id="sidIcon" class="far fa-chart-bar"></i>Stats</a>
+                            <ul class="collapse list-unstyled" id="statsSubmenu">
+                                <li>
+                                    <a href="../stats/stats.html">Stats</a>
+                                </li>
+                            </ul>
                         </li>
+                    </li>
+                    <li class="notActive">
                         <a href="#gameSubmenu" data-toggle="collapse" aria-expanded="false"
                         class="dropdown-toggle"><i id="sidIcon" class="fas fa-gamepad"></i>Games</a>
                         <ul class="collapse list-unstyled" id="gameSubmenu">
                             <li>
-                                <a href="./addGame.html">Add Game</a>
+                                <a href="../games/addGame.html">Add Game</a>
                             </li>
                             <li>
-                                <a href="./infoGame.html">Info Games</a>
+                                <a href="../games/infoGame.html">Info Games</a>
                             </li>
                             <li>
-                                <a href="./changeImageGame.html">Change Image Games</a>
+                                <a href="../games/changeImageGame.html">Change Image Games</a>
                             </li>
                         </ul>
                     </li>
                     <li>
                     <li class="notActive">
                         <a href="#userSubmenu" data-toggle="collapse" aria-expanded="false"
-                            class="dropdown-toggle"><i id="sidIcon" class="fas fa-user"></i> Users</a>
+                            class="dropdown-toggle"><i id="sidIcon" class="fas fa-user"></i>Users</a>
                         <ul class="collapse list-unstyled" id="userSubmenu">
                             <li>
                                 <a href="../users/infoUser.html">Info Users</a>
@@ -62,12 +62,12 @@
                     </li>
                     </li>
                     <li>
-                        <li class="notActive">
+                        <li class="active">
                             <a href="#rateSubmenu" data-toggle="collapse" aria-expanded="false"
                                 class="dropdown-toggle"><i id="sidIcon" class="fas fa-star-half-alt"></i>Rates</a>
                             <ul class="collapse list-unstyled" id="rateSubmenu">
                                 <li>
-                                    <a href="../rates/rates.html">Info Rates</a>
+                                    <a href="./rates.html">Info Rates</a>
                                 </li>
                             </ul>
                         </li>
@@ -92,12 +92,12 @@
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav mx-auto">
-                            <p class="title">Games</p>
+                            <p class="title">Rates</p>
                         </ul>
                     </div>
                 </div>
             </nav>
-            <table id="gameTable" class="display">
+            <table id="rateTable" class="display">
             </table>
         </div>
     </main>
@@ -121,7 +121,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="../js/dataTables.altEditor.free.js"></script>
     <script src="../js/components.js"> </script>
-    <script src="../js/tableInfoGame.js"></script>
+    <script src="../js/tableRates.js"></script>
 </body>
 
 </html>

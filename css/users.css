@@ -166,7 +166,8 @@ a.article:hover {
 
 input[type="text"],
 input[type="number"],
-input[type="file"] {
+input[type="file"],
+textarea {
   padding: 5px;
   border: 1px solid #333;
   border-radius: 5px;

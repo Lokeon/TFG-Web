@@ -15,6 +15,12 @@ $(document).ready(function () {
         hoverMsg: "Separate with commas",
         type: "text",
       },
+      {
+        data: "platforms",
+        title: "Platforms",
+        hoverMsg: "Separate with commas",
+        type: "text",
+      },
       { data: "description", title: "Description", type: "text" },
       {
         data: "date",

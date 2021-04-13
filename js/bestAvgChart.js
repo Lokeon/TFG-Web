@@ -2,9 +2,9 @@ $(document).ready(function () {
   $.ajax({
     type: "GET",
     dataType: "json",
-    url: "http://localhost:3000/api/admins/rated5",
+    url: "http://localhost:3000/api/admins/avg5",
     success: function (data) {
-      var ctx = document.getElementById("mostVotedChart").getContext("2d");
+      var ctx = document.getElementById("bestAvgChart").getContext("2d");
       var myChart = new Chart(ctx, {
         type: "bar",
         data: {
@@ -17,20 +17,20 @@ $(document).ready(function () {
           ],
           datasets: [
             {
-              label: "Total Votes",
+              label: "Average rate",
               data: [
-                data[0].votes,
-                data[1].votes,
-                data[2].votes,
-                data[3].votes,
-                data[4].votes,
+                data[0].avgs,
+                data[1].avgs,
+                data[2].avgs,
+                data[3].avgs,
+                data[4].avgs,
               ],
               backgroundColor: [
-                "rgba(51,53,51, 0.8)",
-                "rgba(36,36,35, 0.8)",
-                "rgba(245,203,92, 0.8)",
-                "rgba(232,237,223, 0.8)",
-                "rgba(207,219,213, 0.8)",
+                "rgba(0,0,0, 0.8)",
+                "rgba(20,33,61, 0.8)",
+                "rgba(252,163,17, 0.8)",
+                "rgba(229,229,229, 0.8)",
+                "rgba(221,239,240, 0.8)",
               ],
             },
           ],

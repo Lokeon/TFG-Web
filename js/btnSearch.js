@@ -1,7 +1,7 @@
 $(document).ready(function () {
   $("#Image").bind("keyup change", function () {
     var empty = false;
-    $("").each(function () {
+    $("#Image").each(function () {
       if ($(this).val() == "") {
         empty = true;
       }

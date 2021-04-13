@@ -5,6 +5,13 @@ function getGameId() {
     url: "http://localhost:3000/api/admins/games/" + $("#searchId").val(),
     success: function (data) {
       $("#Name").val(JSON.stringify(data["name"]).replace(/"/g, ""));
+      $("#Platforms").val(JSON.stringify(data["platforms"]).replace(/"/g, ""));
+      $("#Genres").val(JSON.stringify(data["genre"]).replace(/"/g, ""));
+      $("#Description").val(
+        JSON.stringify(data["description"])
+          .replace(/"/g, "")
+          .replaceAll("\\r\\n", "\r\n")
+      );
     },
     error: function (request, status, error) {
       Swal.fire({
@@ -18,6 +25,11 @@ function getGameId() {
 function patchGame() {
   var formData = new FormData();
   formData.append("image", $("#Image")[0].files[0]);
+  formData.append("name", $("#Name").val());
+  formData.append("genre", $("#Genres").val());
+  formData.append("platforms", $("#Platforms").val());
+  formData.append("description", $("#Description").val());
+
   $.ajax({
     url: "http://localhost:3000/api/admins/games/image/" + $("#searchId").val(),
     type: "PATCH",
@@ -29,9 +41,9 @@ function patchGame() {
     success: function () {
       Swal.fire({
         icon: "success",
-        text: "Image game succesfully changed!",
+        text: "Game succesfully changed!",
       }).then(function () {
-        location.href = "./changeImageGame.html";
+        location.href = "./changeGame.html";
       });
     },
     error: function (request, status, error) {

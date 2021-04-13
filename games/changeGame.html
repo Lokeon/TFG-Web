@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Change Image Games</title>
+    <title>Change Game</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
@@ -73,7 +73,7 @@
                   <a href="../games/infoGame.html">Info Games</a>
                 </li>
                 <li>
-                  <a href="../games/changeImageGame.html">Change Image Games</a>
+                  <a href="../games/changeGame.html">Change Game</a>
                 </li>
               </ul>
             </li>
@@ -133,7 +133,7 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="nav navbar-nav mx-auto">
-                <p class="title">Change Image Games</p>
+                <p class="title">Change Game</p>
               </ul>
             </div>
           </div>
@@ -154,7 +154,35 @@
         <form action="#">
           <div class="input">
             <label>Name</label>
-            <input id="Name" type="text" placeholder="Game name" />
+            <input id="Name" type="text" placeholder="Game name" required />
+          </div>
+          <div class="input">
+            <label>Genres</label>
+            <input
+              id="Genres"
+              type="text"
+              placeholder="Game genres separated with commas"
+              required
+            />
+          </div>
+          <div class="input">
+            <label>Platforms</label>
+            <input
+              id="Platforms"
+              type="text"
+              placeholder="Game platforms separated with commas"
+              required
+            />
+          </div>
+          <div class="input">
+            <label>Description</label>
+            <textarea
+              id="Description"
+              rows="10"
+              cols="90"
+              placeholder="Game Description"
+              required
+            ></textarea>
           </div>
           <div class="input">
             <label>Game Image</label>
@@ -166,7 +194,6 @@
             class="buttons"
             value="Save"
             onclick="patchGame()"
-            disabled="disabled"
           />
         </form>
       </div>
@@ -196,7 +223,7 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="../js/components.js"></script>
-    <script src="../js/btnSearch.js"></script>
+
     <script src="../js/btnSearchId.js"></script>
     <script src="../js/updateGame.js"></script>
   </body>

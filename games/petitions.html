@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rates</title>
+    <title>Games Petition</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
@@ -58,7 +58,7 @@
               </ul>
             </li>
 
-            <li class="notActive">
+            <li class="active">
               <a
                 href="#gameSubmenu"
                 data-toggle="collapse"
@@ -68,16 +68,16 @@
               >
               <ul class="collapse list-unstyled" id="gameSubmenu">
                 <li>
-                  <a href="../games/addGame.html">Add Game</a>
+                  <a href="./addGame.html">Add Game</a>
                 </li>
                 <li>
-                  <a href="../games/infoGame.html">Info Games</a>
+                  <a href="./infoGame.html">Info Games</a>
                 </li>
                 <li>
-                  <a href="../games/changeGame.html">Change Game</a>
+                  <a href="./changeGame.html">Change Game</a>
                 </li>
                 <li>
-                  <a href="../games/petitions.html"
+                  <a href="./petitions.html"
                     ><span id="petitionsN"></span>Petition</a
                   >
                 </li>
@@ -100,7 +100,7 @@
             </li>
 
             <li></li>
-            <li class="active">
+            <li class="notActive">
               <a
                 href="#rateSubmenu"
                 data-toggle="collapse"
@@ -110,7 +110,7 @@
               >
               <ul class="collapse list-unstyled" id="rateSubmenu">
                 <li>
-                  <a href="./rates.html">Info Rates</a>
+                  <a href="../rates/rates.html">Info Rates</a>
                 </li>
               </ul>
             </li>
@@ -139,12 +139,12 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="nav navbar-nav mx-auto">
-                <p class="title">Rates</p>
+                <p class="title">Games Petition</p>
               </ul>
             </div>
           </div>
         </nav>
-        <table id="rateTable" class="display"></table>
+        <table id="petitionTable" class="display"></table>
       </div>
     </main>
     <footer>
@@ -176,7 +176,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="../js/dataTables.altEditor.free.js"></script>
     <script src="../js/components.js"></script>
-    <script src="../js/tableRates.js"></script>
+    <script src="../js/tablePetitions.js"></script>
     <script src="../js/checkPetition.js"></script>
   </body>
 </html>

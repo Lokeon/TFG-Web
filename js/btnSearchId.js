@@ -10,6 +10,7 @@ $(document).ready(function () {
       $("#btnFind").attr("disabled", "disabled");
     } else {
       $("#btnFind").removeAttr("disabled");
+      $("#btnUpdate").removeAttr("disabled")
     }
   });
 });

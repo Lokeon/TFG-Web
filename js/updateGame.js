@@ -2,7 +2,7 @@ function getGameId() {
   $.ajax({
     type: "GET",
     dataType: "json",
-    url: "http://localhost:3000/api/admins/games/" + $("#searchId").val(),
+    url: "https://tfg-recosys.herokuapp.com/api/admins/games/" + $("#searchId").val(),
     success: function (data) {
       $("#Name").val(JSON.stringify(data["name"]).replace(/"/g, ""));
       $("#Platforms").val(JSON.stringify(data["platforms"]).replace(/"/g, ""));
@@ -31,7 +31,7 @@ function patchGame() {
   formData.append("description", $("#Description").val());
 
   $.ajax({
-    url: "http://localhost:3000/api/admins/games/image/" + $("#searchId").val(),
+    url: "https://tfg-recosys.herokuapp.com/api/admins/games/image/" + $("#searchId").val(),
     type: "PATCH",
     dataType: "html",
     data: formData,

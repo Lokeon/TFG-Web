@@ -1,7 +1,7 @@
 $(document).ready(function () {
   $("#userTable").DataTable({
     ajax: {
-      url: "http://localhost:3000/api/admins/users",
+      url: "https://tfg-recosys.herokuapp.com/api/admins/users",
       type: "GET",
       dataSrc: "",
       dataType: "json",
@@ -27,7 +27,7 @@ $(document).ready(function () {
     onDeleteRow: function (datatable, rowdata, success, error) {
       $.ajax({
         type: "DELETE",
-        url: "http://localhost:3000/api/admins/users/delete/" + rowdata["_id"],
+        url: "https://tfg-recosys.herokuapp.com/api/admins/users/delete/" + rowdata["_id"],
         dataType: "text",
         success: function (response) {
           Swal.fire("Poof! User has been deleted!", {

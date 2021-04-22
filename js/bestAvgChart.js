@@ -2,7 +2,7 @@ $(document).ready(function () {
   $.ajax({
     type: "GET",
     dataType: "json",
-    url: "http://localhost:3000/api/admins/avg5",
+    url: "https://tfg-recosys.herokuapp.com/api/admins/avg5",
     success: function (data) {
       var ctx = document.getElementById("bestAvgChart").getContext("2d");
       var myChart = new Chart(ctx, {

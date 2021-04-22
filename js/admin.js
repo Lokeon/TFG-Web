@@ -2,7 +2,7 @@ function login() {
   $.ajax({
     type: "POST",
     contentType: "application/json",
-    url: "http://localhost:3000/api/auth/login/admins",
+    url: "https://tfg-recosys.herokuapp.com/api/auth/login/admins",
     data: JSON.stringify({
       username: $("#Username").val(),
       password: $("#Password").val(),

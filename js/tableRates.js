@@ -1,7 +1,7 @@
 $(document).ready(function () {
   $("#rateTable").DataTable({
     ajax: {
-      url: "http://localhost:3000/api/admins/rates",
+      url: "https://tfg-recosys.herokuapp.com/api/admins/rates",
       type: "GET",
       dataSrc: "",
       dataType: "json",

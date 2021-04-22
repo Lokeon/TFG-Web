@@ -2,7 +2,7 @@ $(document).ready(function () {
   $.ajax({
     type: "GET",
     dataType: "json",
-    url: "http://localhost:3000/api/admins/rated5",
+    url: "https://tfg-recosys.herokuapp.com/api/admins/rated5",
     success: function (data) {
       var ctx = document.getElementById("mostVotedChart").getContext("2d");
       var myChart = new Chart(ctx, {

@@ -6,7 +6,7 @@ function postGame() {
   formData.append("description", $("#Description").val());
   formData.append("image", $("#Image")[0].files[0]);
   $.ajax({
-    url: "http://localhost:3000/api/admins/games/game",
+    url: "https://tfg-recosys.herokuapp.com/api/admins/games/game",
     type: "POST",
     dataType: "html",
     data: formData,

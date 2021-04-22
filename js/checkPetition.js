@@ -2,7 +2,7 @@ $(document).ready(function () {
   $.ajax({
     type: "GET",
     dataType: "json",
-    url: "http://localhost:3000/api/admins/petition/check",
+    url: "https://tfg-recosys.herokuapp.com/api/admins/petition/check",
     success: function (data) {
       if (data.totalPetitions > 0) {
         $(".fa-gamepad").css({ color: "red" });

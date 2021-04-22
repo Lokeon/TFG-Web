@@ -1,7 +1,7 @@
 $(document).ready(function () {
   $("#petitionTable").DataTable({
     ajax: {
-      url: "http://localhost:3000/api/admins/petition",
+      url: "https://tfg-recosys.herokuapp.com/api/admins/petition",
       type: "GET",
       dataSrc: "",
       dataType: "json",
@@ -31,7 +31,7 @@ $(document).ready(function () {
       $.ajax({
         type: "DELETE",
         url:
-          "http://localhost:3000/api/admins/petition/delete/" + rowdata["_id"],
+          "https://tfg-recosys.herokuapp.com/api/admins/petition/delete/" + rowdata["_id"],
         dataType: "text",
         success: function (response) {
           Swal.fire("Poof! Petition has been deleted!", {

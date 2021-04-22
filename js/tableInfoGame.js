@@ -1,7 +1,7 @@
 $(document).ready(function () {
   $("#gameTable").DataTable({
     ajax: {
-      url: "http://localhost:3000/api/admins/games/",
+      url: "https://tfg-recosys.herokuapp.com/api/admins/games/",
       type: "GET",
       dataSrc: "",
       dataType: "json",
@@ -43,7 +43,7 @@ $(document).ready(function () {
     onDeleteRow: function (datatable, rowdata, success, error) {
       $.ajax({
         type: "DELETE",
-        url: "http://localhost:3000/api/admins/games/delete/" + rowdata["_id"],
+        url: "https://tfg-recosys.herokuapp.com/api/admins/games/delete/" + rowdata["_id"],
         dataType: "text",
         success: function (response) {
           Swal.fire("Poof! Game has been deleted!", {

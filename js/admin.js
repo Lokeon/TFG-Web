@@ -13,7 +13,7 @@ function login() {
         text: "Logged in!",
         timer: 2000,
       }).then(function () {
-        location.href = "./stats/stats.html";
+        location.href = "./home/home.html";
       });
     },
     error: function (request, status, error) {

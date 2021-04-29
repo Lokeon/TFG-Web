@@ -206,3 +206,18 @@ label {
   font-size: 1.3em;
   margin-right: 4.5%;
 }
+
+.card {
+  margin: 5%;
+  padding: 5%;
+}
+
+.card a img {
+  width: 8rem;
+  height: 8rem;
+}
+
+.card-title {
+  text-align: center;
+  margin-top: 15%;
+}

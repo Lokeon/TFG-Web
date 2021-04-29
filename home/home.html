@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Games Petition</title>
+    <title>Home</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
@@ -42,11 +42,12 @@
             <h3>Administration</h3>
           </div>
           <ul class="list-unstyled components">
-            <li class="notActive">
-              <a href="../home/home.html"
+            <li class="active">
+              <a href="./home.html"
                 ><i id="sidIcon" class="fas fa-home"></i>Home</a
               >
             </li>
+
             <li class="notActive">
               <a
                 href="#statsSubmenu"
@@ -61,7 +62,8 @@
                 </li>
               </ul>
             </li>
-            <li class="active">
+
+            <li class="notActive">
               <a
                 href="#gameSubmenu"
                 data-toggle="collapse"
@@ -71,16 +73,16 @@
               >
               <ul class="collapse list-unstyled" id="gameSubmenu">
                 <li>
-                  <a href="./addGame.html">Add Game</a>
+                  <a href="../games/addGame.html">Add Game</a>
                 </li>
                 <li>
-                  <a href="./infoGame.html">Info Games</a>
+                  <a href="../games/infoGame.html">Info Games</a>
                 </li>
                 <li>
-                  <a href="./changeGame.html">Change Game</a>
+                  <a href="../games/changeGame.html">Change Game</a>
                 </li>
                 <li>
-                  <a href="./petitions.html"
+                  <a href="../games/petitions.html"
                     ><span id="petitionsN"></span>Petition</a
                   >
                 </li>
@@ -141,12 +143,53 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="nav navbar-nav mx-auto">
-                <p class="title">Games Petition</p>
+                <p class="title">Home</p>
               </ul>
             </div>
           </div>
         </nav>
-        <table id="petitionTable" class="display"></table>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="card border-dark">
+              <a href="../stats/stats.html"
+                ><img src="../svg/chart-bar-regular.svg" class="card-img-top"
+              /></a>
+
+              <div class="card-body">
+                <h5 class="card-title">Stats</h5>
+              </div>
+            </div>
+            <div class="card border-dark">
+              <a href="../games/infoGame.html">
+                <img src="../svg/gamepad-solid.svg" class="card-img-top"
+              /></a>
+
+              <div class="card-body">
+                <h5 class="card-title">Games</h5>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="card border-dark">
+              <a href="../users/infoUser.html"
+                ><img src="../svg/user-solid.svg" class="card-img-top"
+              /></a>
+
+              <div class="card-body">
+                <h5 class="card-title">User</h5>
+              </div>
+            </div>
+            <div class="card border-dark">
+              <a href="../rates/rates.html">
+                <img src="../svg/star-half-alt-solid.svg" class="card-img-top"
+              /></a>
+
+              <div class="card-body">
+                <h5 class="card-title">Rates</h5>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     <footer>
@@ -172,13 +215,8 @@
       src="https://kit.fontawesome.com/c663126675.js"
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.6.2/js/dataTables.buttons.js"></script>
-    <script src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <script src="../js/dataTables.altEditor.free.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../js/components.js"></script>
-    <script src="../js/tablePetitions.js"></script>
     <script src="../js/checkPetition.js"></script>
   </body>
 </html>
